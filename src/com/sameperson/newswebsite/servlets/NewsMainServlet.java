@@ -1,4 +1,4 @@
-package com.sameperson.newswebsite;
+package com.sameperson.newswebsite.servlets;
 
 import com.sameperson.newswebsite.model.NewsList;
 
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/news")
+@WebServlet("")
 public class NewsMainServlet extends HttpServlet {
 
     @Override
@@ -19,12 +19,11 @@ public class NewsMainServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/main.jsp");
 
         NewsList newsList = new NewsList();
-        newsList.addNews("Something happened! Something that deserves to tell in the news!", "Text");
-        newsList.addNews("Something else happened!", "Text");
+
+        System.out.println(req.getPathInfo());
 
         req.setAttribute("newsList", newsList.getList());
-
-
+        System.out.println(newsList);
         requestDispatcher.forward(req, resp);
 
     }

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class NewsBean {
 
-
+    private String name;
     private String title;
     private String body;
     private LocalDateTime timeOfPublication;
@@ -13,8 +13,9 @@ public class NewsBean {
         this.refreshTime();
     }
 
-    public NewsBean(String title, String newsBody) {
+    public NewsBean(String name, String title, String newsBody) {
         this.refreshTime();
+        this.name = name;
         this.title = title;
         this.body = newsBody;
     }
@@ -40,11 +41,24 @@ public class NewsBean {
     }
 
     public String getTimeOnly() {
-        return timeOfPublication.getHour() + " : " + timeOfPublication.getMinute();
+        return timeOfPublication.getHour() + ":" + timeOfPublication.getMinute();
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     private void refreshTime() {
         this.timeOfPublication = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return title;
     }
 
 

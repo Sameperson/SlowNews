@@ -9,8 +9,10 @@
     <table>
       <c:forEach items="${newsList}" var="news">
         <tr>
-          <td><c:out value="${news.title}" /><td>
-          <td><c:out value="${user.body}" /><td>
+          <td bgcolor="#FF0000"><c:out value="${news.timeOnly}" /><a>
+          <td bgcolor="#FFFF00">
+            <a href="news/<c:out value="${news.name}" />"><c:out value="${news.title}" /></a>
+          <td>
         </tr>
       </c:forEach>
     </table>
