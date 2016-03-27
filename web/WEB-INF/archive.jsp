@@ -10,7 +10,7 @@
 
 </head>
 <header>
-  <a href=".." id="logo">
+  <a href=".." class="logo">
     <h1>Slow News</h1>
   </a>
   <nav>
