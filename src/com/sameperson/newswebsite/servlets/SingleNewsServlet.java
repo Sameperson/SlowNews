@@ -16,11 +16,21 @@ import java.io.IOException;
 @WebServlet("/news/*")
 public class SingleNewsServlet extends HttpServlet {
 
+    private volatile NewsList newsList;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        newsList = NewsList.getInstance();
+        System.out.println("SingleNewsServlet initialized");
+
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/newsInstance.jsp");
-        NewsList newsList = new NewsList();
+
         resp.getWriter().write("Test");
 
         String newsUri = req.getPathInfo();

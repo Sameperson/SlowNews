@@ -6,7 +6,11 @@
     <title></title>
 </head>
     <div>
-        <c:out value="${newsInstance.title}" />
+        <img src="../resources/images/<c:out value="${newsInstance.name}" />.jpg"
+             alt="<c:out value="${newsInstance.name}" />" height="420" width="420">
+    </div>
+    <div>
+        <b><c:out value="${newsInstance.title}" /></b>
     </div>
     <div>
         <c:out value="${newsInstance.body}" />
