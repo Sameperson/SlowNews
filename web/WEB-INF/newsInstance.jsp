@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
     <title>Slow News</title>
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="../resources/css/main.css">
     <link rel="stylesheet" href="../resources/css/responsive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <header>
     <a href=".." id="logo">
@@ -23,7 +21,7 @@
         </ul>
     </nav>
 </header>
-<body>
+<div>
     <div class="newsPage">
         <div class="newsTitle">
             <c:out value="${newsInstance.title}" />
@@ -35,6 +33,9 @@
         <div class="newsBody">
             <c:out value="${newsInstance.body}" />
         </div>
-    </div>
+        <div>
+            <button type="button">Archieve</button>
+        </div>
+
 </body>
 </html>

@@ -29,9 +29,7 @@ public class SingleNewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/newsInstance.jsp");
-
-        resp.getWriter().write("Test");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/newsInstance.jsp");
 
         String newsUri = req.getPathInfo();
         String newsName = newsUri.substring(1, newsUri.length());

@@ -20,19 +20,15 @@ public class NewsMainServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         newsList = NewsList.getInstance();
-        System.out.println("SingleNewsServlet initialized");
+        System.out.println("News main servlet initialized");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/main.jsp");
+        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp");
 
-        NewsList newsList = NewsList.getInstance();
-
-        System.out.println(req.getPathInfo());
-
+        newsList = NewsList.getInstance();
         req.setAttribute("newsList", newsList.getList());
-        System.out.println(newsList);
         requestDispatcher.forward(req, resp);
     }
 }

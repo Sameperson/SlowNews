@@ -55,7 +55,7 @@ nav a.selected, nav a:hover {
 }
 
 .newsTable a:hover {
-    color: #8f3100;
+    color: #a43800;
     text-decoration: none;
 }
 
@@ -64,7 +64,7 @@ MAIN PAGE NEWS LIST
 *****************************/
 
 .newsTable {
-  margin-left: 20px;
+  margin: auto;
   font-size: 20px;
 }
 
@@ -104,6 +104,7 @@ NEWS INSTANCE
 
 .newsBody {
     margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 /****************************
@@ -115,11 +116,6 @@ header {
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
   width: 100%;
-}
-
-#logo {
-  text-align: center;
-  margin: 0;
 }
 
 h1 {
@@ -159,26 +155,9 @@ nav li {
 
 nav a {
   font-weight: 800;
-  padding: 10px 10px; 
+  padding: 10px 10px;
 }
 
-/****************************
-FOOTER
-*****************************/
-
-footer {
-  font-size: 0.75em;
-  text-align: center;
-  clear: both;
-  padding-top: 50px;
-  color: #7E7C7D;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-}
 
 
 
