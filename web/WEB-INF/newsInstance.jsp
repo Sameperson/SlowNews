@@ -34,7 +34,7 @@
             <c:out value="${newsInstance.body}" />
         </div>
         <div>
-            <button type="button">Archieve</button>
+            <button type="button">Archive</button>
         </div>
     </div>
 </div>
