@@ -34,6 +34,5 @@ public class NewsMainServlet extends HttpServlet {
         req.setAttribute("newsList", newsList.getList());
         System.out.println(newsList);
         requestDispatcher.forward(req, resp);
-
     }
 }

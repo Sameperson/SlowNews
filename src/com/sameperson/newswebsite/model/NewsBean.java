@@ -41,7 +41,7 @@ public class NewsBean {
     }
 
     public String getTimeOnly() {
-        return timeOfPublication.getHour() + ":" + timeOfPublication.getMinute();
+        return String.format("%02d:%02d", timeOfPublication.getHour(), timeOfPublication.getMinute());
     }
 
     public void setName(String name) {
